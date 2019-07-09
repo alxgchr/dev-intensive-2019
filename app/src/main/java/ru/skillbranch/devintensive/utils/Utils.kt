@@ -19,5 +19,13 @@ class Utils {
 
             return Pair(firstName, lastName)
         }
+
+        fun transliteration(payload: String, divider: String = " "): String {
+            return ""
+        }
+
+        fun toInitials(firstName: String?, lastName: String?): String? {
+            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        }
     }
 }
