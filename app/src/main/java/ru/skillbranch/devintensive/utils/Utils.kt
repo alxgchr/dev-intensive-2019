@@ -21,6 +21,7 @@ class Utils {
         }
 
         fun transliteration(payload: String, divider: String = " "): String {
+            
             return ""
         }
 
@@ -31,9 +32,6 @@ class Utils {
             val inicialFirst: String?
             val inicialLast: String?
 
-//            if(localFirstName.isNullOrEmpty() && localLastName.isNullOrEmpty())
-//                return null
-//            if(localFirstName?.isNotEmpty())
             if (localFirstName.isNullOrEmpty()) {
                 inicialFirst = ""
             } else {
