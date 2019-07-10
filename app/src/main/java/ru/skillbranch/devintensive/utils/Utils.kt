@@ -25,7 +25,32 @@ class Utils {
         }
 
         fun toInitials(firstName: String?, lastName: String?): String? {
-            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            val localFirstName = firstName?.trim()
+            val localLastName = lastName?.trim()
+
+            val inicialFirst: String?
+            val inicialLast: String?
+
+//            if(localFirstName.isNullOrEmpty() && localLastName.isNullOrEmpty())
+//                return null
+//            if(localFirstName?.isNotEmpty())
+            if (localFirstName.isNullOrEmpty()) {
+                inicialFirst = ""
+            } else {
+                inicialFirst = localFirstName.substring(0, 1).toUpperCase()
+            }
+
+            if (localLastName.isNullOrEmpty()) {
+                inicialLast = ""
+            } else {
+                inicialLast = localLastName.substring(0, 1).toUpperCase()
+            }
+
+            if (inicialFirst.isEmpty() && inicialLast.isEmpty())
+                return null
+
+            return inicialFirst + inicialLast
+
         }
     }
 }
