@@ -20,6 +20,7 @@ abstract class BaseMessage(
             date: Date,
             type: String = "text",
             payload: Any,
+
             isIncoming: Boolean = false
         ): BaseMessage {
             lastId++
