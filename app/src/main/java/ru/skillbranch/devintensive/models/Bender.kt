@@ -51,15 +51,15 @@ class Bender(var status: Status = Status.NORMAL, var question: Question = Questi
         var result = "Ok"
         when (question) {
             Question.NAME -> {
-                val char = answer.toCharArray()[0]
-                if (char.isLowerCase()) {
+                val char = answer.toCharArray()
+                if (char.isEmpty() || char[0].isLowerCase()) {
                     result = "Имя должно начинаться с заглавной буквы\n${question.question}"
                 }
             }
             Question.PROFESSION -> {
                 //Профессия должна начинаться со строчной буквы
-                val char = answer.toCharArray()[0]
-                if (char.isUpperCase()) {
+                val char = answer.toCharArray()
+                if (char.isEmpty() || char[0].isUpperCase()) {
                     result = "Профессия должна начинаться со строчной буквы\n${question.question}"
                 }
             }
