@@ -21,7 +21,6 @@ class Utils {
         }
 
         fun transliteration(payload: String, divider: String = " "): String {
-
             return ""
         }
 
